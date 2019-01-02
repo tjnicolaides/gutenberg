@@ -1,5 +1,9 @@
 ## 9.0.8 (Unreleased)
 
+### New feature
+
+- Added new `EditorSaveKeyboardShortcut` component, which was refactored out from the `EditorGlobalKeyboardShortcuts` component.
+
 ### Internal
 
 - Removed `jQuery` dependency
