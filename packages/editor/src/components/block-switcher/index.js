@@ -54,12 +54,14 @@ export class BlockSwitcher extends Component {
 		);
 
 		const sourceBlockName = blocks[ 0 ].name;
-		const blockType = getBlockType( sourceBlockName );
+		let blockType;
 
 		if ( ! hasBlockStyles && ! possibleBlockTransformations.length ) {
 			if ( blocks.length > 1 ) {
 				return null;
 			}
+
+			blockType = getBlockType( sourceBlockName );
 			return (
 				<Toolbar>
 					<IconButton
@@ -73,6 +75,7 @@ export class BlockSwitcher extends Component {
 			);
 		}
 
+		blockType = getBlockType( sourceBlockName );
 		return (
 			<Dropdown
 				position="bottom right"
