@@ -139,6 +139,8 @@ $arrow-size: 8px;
 	background: $white;
 	height: 100%;
 
+	@include components-popover__appear-animation();
+
 	.components-popover.is-mobile & {
 		height: calc(100% - #{ $panel-header-height });
 		border-top: 0;

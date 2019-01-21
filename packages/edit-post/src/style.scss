@@ -50,6 +50,16 @@
 	}
 }
 
+@keyframes components-popover__appear-animation {
+	from {
+		max-height: 0;
+		overflow: hidden;
+	}
+	to {
+		max-height: 800px;
+	}
+}
+
 // In order to use mix-blend-mode, this element needs to have an explicitly set background-color
 // We scope it to .wp-toolbar to be wp-admin only, to prevent bleed into other implementations
 html.wp-toolbar {
