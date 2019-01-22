@@ -125,7 +125,7 @@ describe( 'getAutosave', () => {
 		const postId = 2;
 		const autosave = { title: { raw: '' }, excerpt: { raw: '' }, content: { raw: '' } };
 		const state = {
-			autosave: {
+			autosaves: {
 				1: autosave,
 			},
 		};
@@ -140,7 +140,7 @@ describe( 'getAutosave', () => {
 		const postId = 1;
 		const autosave = { title: { raw: '' }, excerpt: { raw: '' }, content: { raw: '' } };
 		const state = {
-			autosave: {
+			autosaves: {
 				[ postId ]: autosave,
 			},
 		};

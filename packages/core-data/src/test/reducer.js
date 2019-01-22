@@ -7,7 +7,7 @@ import { filter } from 'lodash';
 /**
  * Internal dependencies
  */
-import { terms, entities, embedPreviews, hasUploadPermissions, autosave } from '../reducer';
+import { terms, entities, embedPreviews, hasUploadPermissions, autosaves } from '../reducer';
 
 describe( 'terms()', () => {
 	it( 'returns an empty object by default', () => {
@@ -137,9 +137,9 @@ describe( 'hasUploadPermissions()', () => {
 	} );
 } );
 
-describe( 'autosave', () => {
+describe( 'autosaves', () => {
 	it( 'returns an empty object by default', () => {
-		const state = autosave( undefined, {} );
+		const state = autosaves( undefined, {} );
 
 		expect( state ).toEqual( {} );
 	} );
@@ -171,7 +171,7 @@ describe( 'autosave', () => {
 			status: 'draft',
 		};
 
-		const state = autosave( { 1: existingAutosave }, {
+		const state = autosaves( { 1: existingAutosave }, {
 			type: 'RECEIVE_AUTOSAVE',
 			postId: 2,
 			autosave: newAutosave,

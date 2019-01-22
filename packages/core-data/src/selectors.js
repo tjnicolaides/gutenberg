@@ -204,7 +204,7 @@ export function hasUploadPermissions( state ) {
  * @return {?Object} The autosave object, or undefined if there is none.
  */
 export function getAutosave( state, postType, postId ) {
-	return state.autosave[ postId ];
+	return state.autosaves[ postId ];
 }
 
 /**

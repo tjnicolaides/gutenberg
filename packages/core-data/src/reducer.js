@@ -235,20 +235,20 @@ export function hasUploadPermissions( state = true, action ) {
 }
 
 /**
- * Reducer returning the most recent autosave.
+ * Reducer returning autosaves keyed by their parent's post id.
  *
  * @param  {Object} state  Current state.
  * @param  {Object} action Dispatched action.
  *
  * @return {Object} Updated state.
  */
-export function autosave( state = {}, action ) {
+export function autosaves( state = {}, action ) {
 	switch ( action.type ) {
 		case 'RECEIVE_AUTOSAVE':
-			const { postId, autosave: autosavePost } = action;
+			const { postId, autosave } = action;
 
 			return {
-				[ postId ]: autosavePost,
+				[ postId ]: autosave,
 				...state,
 			};
 	}
@@ -264,5 +264,5 @@ export default combineReducers( {
 	entities,
 	embedPreviews,
 	hasUploadPermissions,
-	autosave,
+	autosaves,
 } );
