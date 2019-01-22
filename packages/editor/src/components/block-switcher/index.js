@@ -57,9 +57,6 @@ export class BlockSwitcher extends Component {
 		const blockType = getBlockType( sourceBlockName );
 
 		if ( ! hasBlockStyles && ! possibleBlockTransformations.length ) {
-			if ( blocks.length > 1 ) {
-				return null;
-			}
 			return (
 				<Toolbar>
 					<IconButton
