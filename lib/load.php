@@ -21,6 +21,9 @@ if ( class_exists( 'WP_REST_Controller' ) ) {
 	if ( ! class_exists( 'WP_REST_Themes_Controller' ) ) {
 		require dirname( __FILE__ ) . '/class-wp-rest-themes-controller.php';
 	}
+	if ( ! class_exists( 'WP_REST_Widget_Updater_Controller' ) ) {
+		require dirname( __FILE__ ) . '/class-wp-rest-widget-updater-controller.php';
+	}
 	if ( ! class_exists( 'WP_REST_Block_Renderer_Controller' ) ) {
 		require dirname( __FILE__ ) . '/class-wp-rest-block-renderer-controller.php';
 	}
